@@ -31,6 +31,9 @@ repositories {
 
 ext {
 	set('springCloudVersion', 'Greenwich.RELEASE')
+	firestore_version = '6.7.0'
+	jsoup_version = '1.11.3'
+	coroutines_version = '1.1.1'
 }
 
 dependencies {
@@ -43,6 +46,12 @@ dependencies {
 	implementation 'org.springframework.cloud:spring-cloud-starter'
 	implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
 	implementation "org.jetbrains.kotlin:kotlin-reflect"
+
+
+	implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
+	implementation "com.google.firebase:firebase-admin:$firestore_version"
+	implementation "org.jsoup:jsoup:$jsoup_version"
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.security:spring-security-test'
 }
