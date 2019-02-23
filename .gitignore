@@ -249,3 +249,4 @@ gradle-app.setting
 
 #external configuration for components
 src/main/resources/configs
+src/main/resources/config
