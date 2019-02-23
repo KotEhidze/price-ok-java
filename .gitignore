@@ -246,3 +246,6 @@ gradle-app.setting
 **/build/
 
 # End of https://www.gitignore.io/api/java,gradle,kotlin,intellij,java-web,code-java,intellij+all,intellij+iml
+
+#external configuration for components
+src/main/resources/configs
