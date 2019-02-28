@@ -26,7 +26,7 @@ class FirestoreDatabase @Autowired constructor(props: FirestoreProperties) {
     final fun collection(name: String) = db.collection(name)
 
     final fun insertData(collectionName: String, map: MutableMap<String, Any>)
-            = db.collection(collectionName).document().set(map)
+            = db.collection(collectionName).document().set(map).get()
 
     final fun updateData(collectionName: String, documentName: String, map: MutableMap<String, Any>)
             = db.collection(collectionName).document(documentName).set(map)
