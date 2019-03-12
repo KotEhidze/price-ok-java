@@ -20,17 +20,60 @@ class JsonManagerTest {
     }
 
     @Test
-    fun readJsonTest(){
-        jsonManager.readJson()
+    fun writeJsonTest(){
+        val exampleData =  mutableMapOf<String, Any>(
+                "Brand" to "Iphone",
+                "Model" to "6s",
+                "Ram" to 2,
+                "Storage" to 16,
+                "Price" to 235
+        )
+
+        val exampleData1 =  mutableMapOf<String, Any>(
+                "Brand" to "Samsung",
+                "Model" to "7A",
+                "Ram" to 3,
+                "Storage" to 32,
+                "Price" to 175
+        )
+
+        val exampleData2 =  mutableMapOf<String, Any>(
+                "Brand" to "Samsung",
+                "Model" to "Galaxy S2",
+                "Ram" to 3,
+                "Storage" to 64,
+                "Price" to 120
+        )
+
+        val exampleData3 =  mutableMapOf<String, Any>(
+                "Brand" to "Iphone",
+                "Model" to "XS Max",
+                "Ram" to 4,
+                "Storage" to 256,
+                "Price" to 1050
+        )
+
+        jsonManager.writeJson(exampleData, "1", false)
+        jsonManager.writeJson(exampleData1, "2", false)
+        jsonManager.writeJson(exampleData2, "3", false)
+        jsonManager.writeJson(exampleData3, "4",true)
+
     }
 
     @Test
-    fun writeJsonTest(){
-        val exampleData =  mutableMapOf<String, Any>(
-                "model" to "IPhone",
-                "storage" to 16
-        )
-        jsonManager.writeJson(exampleData)
+    fun readJsonTest(){
+        print(jsonManager.readJson())
     }
+
+    @Test
+    fun findJsonObjectTest(){
+        print(jsonManager.findJsonObject("3"))
+    }
+
+    @Test
+    fun clearJsonFileTest(){
+    jsonManager.clearJsonFile()
+    }
+
 
 }
