@@ -19,15 +19,11 @@ class FirestoreDatabaseTest {
     }
 
     @Test
-    fun contextLoads() {}
-
-    @Test
     fun insertDataTest(){
         val data =  mutableMapOf<String, Any>(
                 "model" to "Iphone",
                 "storage" to 32
         )
-
         firestoreDatabase.insertData(COLLECTTION_NAME, data)
     }
 
@@ -39,14 +35,12 @@ class FirestoreDatabaseTest {
                 "model" to "IPhone",
                 "storage" to 16
         )
-
         firestoreDatabase.updateData(COLLECTTION_NAME,documentName, data)
     }
 
     @Test
     fun getDataTest () {
         val documentName = "exampleName"
-
         print(firestoreDatabase.getData(COLLECTTION_NAME, documentName).data)
     }
 
@@ -54,5 +48,4 @@ class FirestoreDatabaseTest {
         val documentName = "exampleName"
         firestoreDatabase.deleteData(COLLECTTION_NAME,documentName)
     }
-
 }

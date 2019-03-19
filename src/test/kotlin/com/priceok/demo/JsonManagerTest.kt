@@ -15,11 +15,6 @@ class JsonManagerTest {
     lateinit var jsonManager: JsonManager
 
     @Test
-    fun contextLoads() {
-
-    }
-
-    @Test
     fun writeJsonTest(){
         val exampleData =  mutableMapOf<String, Any>(
                 "Brand" to "Iphone",
@@ -28,7 +23,6 @@ class JsonManagerTest {
                 "Storage" to 16,
                 "Price" to 235
         )
-
         val exampleData1 =  mutableMapOf<String, Any>(
                 "Brand" to "Samsung",
                 "Model" to "7A",
@@ -36,7 +30,6 @@ class JsonManagerTest {
                 "Storage" to 32,
                 "Price" to 175
         )
-
         val exampleData2 =  mutableMapOf<String, Any>(
                 "Brand" to "Samsung",
                 "Model" to "Galaxy S2",
@@ -44,7 +37,6 @@ class JsonManagerTest {
                 "Storage" to 64,
                 "Price" to 120
         )
-
         val exampleData3 =  mutableMapOf<String, Any>(
                 "Brand" to "Iphone",
                 "Model" to "XS Max",
@@ -52,12 +44,10 @@ class JsonManagerTest {
                 "Storage" to 256,
                 "Price" to 1050
         )
-
         jsonManager.writeJson(exampleData, "1", false)
         jsonManager.writeJson(exampleData1, "2", false)
         jsonManager.writeJson(exampleData2, "3", false)
         jsonManager.writeJson(exampleData3, "4",true)
-
     }
 
     @Test
@@ -74,6 +64,4 @@ class JsonManagerTest {
     fun clearJsonFileTest(){
     jsonManager.clearJsonFile()
     }
-
-
 }

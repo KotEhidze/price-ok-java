@@ -18,9 +18,7 @@ class JsonManager{
 
         if (isDone) {
             try {
-                // Writing to a file
                 mapper.writeValue(File(FILE_PATH), objectMap)
-
             } catch (e: IOException) {
                 e.printStackTrace()
             }
@@ -43,6 +41,5 @@ class JsonManager{
     fun clearJsonFile() {
         mapper.writeValue(File(FILE_PATH), null)
     }
-
 }
 
